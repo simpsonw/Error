@@ -1,0 +1,22 @@
+build:
+- dockerfile: Dockerfile
+  image: nafigostest/nafigos-webapp-nginx:latest
+description: test
+run_on_build: true
+http_ports:
+- name: frontend
+  port: 81
+  targetPort: frontend
+name: nafigos-helloworld
+type: container
+workflow: |
+  - image: {{image 1}}
+    name: nginx-container
+    ports:
+    - containerPort: 80
+      name: frontend
+  - image: training/webapp
+    name: webapp-container
+    env:
+    - name: PROVIDER
+      value: nafigos
