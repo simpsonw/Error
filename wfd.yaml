@@ -7,7 +7,7 @@ http_ports:
 - name: frontend
   port: 81
   targetPort: frontend
-name: Error
+name: myworkflow
 type: container
 workflow: |
   - image: {{image 1}}
