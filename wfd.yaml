@@ -2,7 +2,6 @@ build:
 - dockerfile: Dockerfile
   image: nafigostest/nafigos-webapp-nginx:latest
 description: test
-error_msg: 'correct error in git and update: [a DNS-1123 subdomain must consist of lower case alphanumeric characters, ''-'' or ''.'', and must start and end with an alphanumeric character (e.g. ''example.com'', regex used for validation is ''[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*'')]'
 http_ports:
 - name: frontend
   port: 81
